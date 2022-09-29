@@ -35,7 +35,7 @@ public class JwtUtils {
         claims.put("id",id);
         return Jwts.builder()
                 .setHeaderParam("type","JWT")
-                .setHeaderParam("alg","RS256")
+                .setHeaderParam("alg","HS512")
                 .setClaims(claims)
                 .setSubject("User").setIssuedAt(currentDate)
                 .setExpiration(exprirationDate)
