@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.permissionsystem.mapper.SysUserMapper">
+
+
+    <select id="findByUsername" resultType="com.example.permissionsystem.entity.SysUser">
+        select * from SysUser where username = #{username}
+
+    </select>
+    <select id="getRoles" resultType="com.example.permissionsystem.entity.SysRole">
+        select sr.id,sr.name from SysRole  sr left join SysUser_Role sur on sr.id = sur.id where sur.user_id = #{userId}
+    </select>
+
+
+</mapper>
