@@ -23,7 +23,7 @@ public class MyUserDetails implements UserDetails {
 
     private String  password;
 
-    private Boolean enabled;
+    private Integer enabled;
 
     private Boolean AccountNonExpired;
 
@@ -72,6 +72,8 @@ public class MyUserDetails implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return enabled;
+        return true;
     }
+
+
 }

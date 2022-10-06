@@ -7,6 +7,7 @@ import org.springframework.data.relational.core.mapping.Table;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.Set;
 
 /**
@@ -23,11 +24,11 @@ public class SysUser  implements Serializable {
 
     private String mobile;
 
-    private Boolean enabled;
+    private Integer enabled;
 
-    private LocalDate createTime;
+    private Date createTime;
 
-    private LocalDate UpdateTime;
+    private Date UpdateTime;
 
 
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.permissionsystem.mapper.SysExportMapper">
+   
+
+
+    <select id="totalNum" resultType="java.lang.Integer">
+        select count(*) from SysUser
+    </select>
+    <select id="downloadByCount" resultType="java.util.HashMap">
+        select id,username,password,mobile,enabled,create_time as createTime
+        ,update_time as UpdateTime from SysUser limit #{currentSize},#{pageSize}
+    </select>
+
+
+</mapper>
